@@ -3,10 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('index/css/style.css') }}">
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+    {% include 'Layout/nav.html.twig' %}
+    {% extends 'about.html.twig' %}
+        {% block body %}
+        <h1> Your Lucky number is {{number}} </h1>
+        {% endblock %}
+
+        {% include 'Layout/footer.html.twig' %} 
     </body>
 </html>

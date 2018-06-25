@@ -3,7 +3,7 @@ $(function() {
     var links = $(".links");
     $(window).scroll(function() {    
         var scroll = $(window).scrollTop();
-        if (scroll >= 50) {
+        if (scroll >= 850) {
             header.addClass("scrolled_nav");
             links.addClass("scrolled_links")
         } else {

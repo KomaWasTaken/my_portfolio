@@ -46,3 +46,10 @@ $total : 12;
   .col-#{$i} 
   {width: column-width($i) };
 }
+@function offset-width($offset){
+  @return percentage($offset/$total);
+}
+@for $i from 1 through $total{
+  .offset-#{$i}
+  {margin-left: offset-width($i)};
+}

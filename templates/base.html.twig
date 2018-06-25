@@ -8,11 +8,14 @@
         {% endblock %}
     </head>
     <body>
-    {% include 'Layout/nav.html.twig' %}
-    {% extends 'about.html.twig' %}
-        {% block body %}
-        <h1> Your Lucky number is {{number}} </h1>
-        {% endblock %}
+        
+        {% include 'header.html.twig' %}
+        {% include 'about.html.twig' %}
+        {% include 'projects.html.twig' %}
+        {% include 'skills.html.twig' %}
+        {% include 'contact.html.twig' %}
+
+
 
         {% include 'Layout/footer.html.twig' %} 
     </body>

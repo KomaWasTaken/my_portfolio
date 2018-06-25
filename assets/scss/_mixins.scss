@@ -36,3 +36,26 @@
     font-size: calculateRem($size);
     font-size: $size; //backup en px
 }
+  @mixin flex_all_center($display, $flex_align, $flex_justify){
+    display:$display;
+    align-items:$flex_align;
+    justify-content:$flex_justify;
+  }
+  @mixin flex_direction($display, $flex-direction){
+    display:$display;
+    flex-direction:$flex-direction;
+  }
+  @mixin flex_justify_content($display, $flex){
+    display:$display;
+    justify-content:$flex;
+  }
+
+$total : 12;
+
+@function column-width($col){
+  @return percentage($col/$total);
+}
+@for $i from 1 through $total {
+  .col-#{$i} 
+  {width: column-width($i) };
+}

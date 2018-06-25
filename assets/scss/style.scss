@@ -1,0 +1,49 @@
+@import "mixins";
+@import "reset";
+
+
+$white : #ffffff;
+
+header{
+    color:$white;
+}
+.border3px{
+    border:solid 5px;
+}
+.border-white{
+    border-color:$white;
+}
+.h100vh{
+    height:100vh;
+}
+.w100vw{
+    width:100vw;
+}
+.bg-img-1{
+    background: url(../images/orion-nebula-11107_960_720.jpg) center 0 no-repeat fixed; 
+    background-size:cover;
+}
+
+header{
+    section{
+        @include flex_all_center(flex, center, center);
+        div{
+            height:35%;
+            @include flex_all_center(flex, null, center);
+            @include flex_direction(flex, column);
+            p{
+                text-align:center;
+                @include fonts("montserrat", 600, 90px);
+            }
+            div{
+                @include flex_direction(flex, row);
+                @include flex_justify_content(flex, space-around);
+                p{
+                    @include flex_all_center(flex, center, center);
+                    @include fonts("montserrat", 600, 35px);
+                }
+            }
+        }
+    }
+}
+

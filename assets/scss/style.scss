@@ -1,17 +1,15 @@
-@import "mixins";
 @import "reset";
+@import "mixins";
 
 
-$white : #ffffff;
-
-header{
-    color:$white;
+.text-white{
+    color:#ffffff;
 }
 .border3px{
     border:solid 5px;
 }
 .border-white{
-    border-color:$white;
+    border-color:#ffffff;
 }
 .h100vh{
     height:100vh;
@@ -23,27 +21,32 @@ header{
     background: url(../images/orion-nebula-11107_960_720.jpg) center 0 no-repeat fixed; 
     background-size:cover;
 }
-
-header{
-    section{
-        @include flex_all_center(flex, center, center);
-        div{
-            height:35%;
-            @include flex_all_center(flex, null, center);
-            @include flex_direction(flex, column);
-            p{
-                text-align:center;
-                @include fonts("montserrat", 600, 90px);
-            }
-            div{
-                @include flex_direction(flex, row);
-                @include flex_justify_content(flex, space-around);
-                p{
-                    @include flex_all_center(flex, center, center);
-                    @include fonts("montserrat", 600, 35px);
-                }
-            }
-        }
-    }
+.d-flex{
+    display:flex;
+}
+.flex-direction-column{
+    flex-direction:column;
+}
+.flex-direction-row{
+    flex-direction:row;
+}
+.a-i-center{
+    align-items:center;
+}
+.j-c-center{
+    justify-content:center;
+}
+.j-c-space-around{
+    justify-content:space-around;
+}
+.text-center{
+    text-align:center;
+}
+.fs-90{
+    @include fonts("montserrat", 600, 90px);
+}
+.fs-35{
+    @extend .fs-90;
+    font-size:35px;
 }
 

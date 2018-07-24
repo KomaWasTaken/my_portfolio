@@ -30,11 +30,15 @@
     }
   }
 
-  @mixin fonts($font, $weight, $size) {
+/*   @mixin fonts($font, $weight, $size) {
     font-family: $font;
     font-weight: $weight;
     font-size: calculateRem($size);
     font-size: $size; //backup en px
+} */
+@mixin fonts($size) {
+  font-size: calculateRem($size);
+  font-size: $size; //backup en px
 }
 
 $total : 12;

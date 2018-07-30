@@ -5,21 +5,25 @@
     </div>
 {%   for project in projects   %}
     <div class="h-100vh w-100 d-flex" style = "background: url('./index/images/{{ project.porImage }}') center center no-repeat; background-size:90%;" >
-        <div class="w-50 bg-color-2 h-100">
-            <h3 class="color-1 fs-30">
-                {{   project.porTitle   }}
-            </h3>
-            <p class="color-1 fs-20">
-                {{   project.porLongDesc   }}
-            </p>
-            <div class="w-20 d-flex j-c-between a-i-center">
-                <span class="horizontal-span-white"></span> 
-                <a href="{{  project.porLink  }}" class="color-1 text-decoration-none fs-18">
-                    voir plus
-                </a>  
-            </div>  
+    
+        <div class="w-50 bg-color-2 h-100 d-flex a-i-center j-c-center">
+            <div class="w-90 h-70 d-flex flex-direction-column j-c-between ">
+                <h3 class="color-1 fs-55 coolvetica text-center">
+                    {{   project.porTitle   }}
+                </h3>
+                <p class="color-1 fs-20 noto m-l-75 w-75">
+                    {{   project.porLongDesc   }}
+                </p>
+                <div class="w-25 d-flex j-c-between a-i-center m-l-75">
+                    <span class="horizontal-span-white"></span> 
+                    <a href="{{  project.porLink  }}" class="color-1 text-decoration-none fs-18 noto">
+                        voir plus
+                    </a>  
+                </div>
+            </div>
+            
+
         </div>
-        <div class="w-50"></div>
     </div>
     {%   endfor   %}
 </section>

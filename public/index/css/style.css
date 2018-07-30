@@ -299,6 +299,9 @@ html {
 .m-l-20 {
   margin-left: 20px; }
 
+.m-l-75 {
+  margin-left: 75px; }
+
 .m-r-5 {
   margin-right: 5px; }
 
@@ -404,7 +407,7 @@ html {
   background: linear-gradient(45deg, rgba(255, 0, 136, 0.7) 0%, rgba(0, 9, 128, 0.7) 25%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0088', endColorstr='#000980',GradientType=1 ); }
 .bg-color-2 {
-  background-color: rgba(71, 77, 163, 0.7);
+  background-color: rgba(71, 77, 163, 0.8);
 }
 
 .bg-color-none {
@@ -437,8 +440,6 @@ html {
 /*/////////////////////////////////////  /////////////////////////////////////
 /////////////////////////////////////  FONT STUFF  //////////////////////////
 /////////////////////////////////////  /////////////////////////////////////*/
-.fs-nav {
-  font-size: 4.4rem; }
 
 .fs-15 {
   font-size: 1.5rem; }
@@ -458,6 +459,9 @@ html {
 .fs-45 {
   font-size: 4.5rem; }
 
+  .fs-55{
+    font-size: 5.5rem; }
+
 .fs-70 {
   font-size: 7rem; }
 
@@ -468,7 +472,7 @@ html {
   font-family: "Coolvetica", "sans serif"; }
 
 .noto {
-  font-family: "Noto Sans", "serif"; }
+  font-family: 'Noto Sans', sans-serif; }
 
 .fw-thin {
   font-weight: 300; }
@@ -502,20 +506,26 @@ html {
 /////////////////////////////////////  ANIMATION STUFF  ////////////////
 /////////////////////////////////////  /////////////////////////////////////*/
 @keyframes fadeIn {
-  from { opacity:0; }
-    to { opacity:1; }
+  0% { opacity:0; }
+  100% { opacity:1; }
 }
 
+
+
 .transition-1{
-  transition: all 0.5s ease;
+  transition: all 0.75s ease;
 }
 
 .bg-about-1:hover, .bg-about-2:hover, .bg-about-3:hover, .bg-about-4:hover, .bg-about-5:hover, .bg-about-6:hover{
-  width:25%;
+  width:66%;
 }
 .bg-about-1:hover .d-none, .bg-about-2:hover .d-none, .bg-about-3:hover .d-none, .bg-about-4:hover .d-none, .bg-about-5:hover .d-none, .bg-about-6:hover .d-none{
   display:block;
-  animation : fadeIn 0.5s;
+  animation : fadeIn 0.75s ease-in;
+}
+
+.bg-about-1:hover .moveUp, .bg-about-2:hover .moveUp, .bg-about-3:hover .moveUp, .bg-about-4:hover .moveUp, .bg-about-5:hover .moveUp, .bg-about-6:hover .moveUp{
+  transform: translateY(-100px);
 }
 
 
@@ -536,15 +546,16 @@ html {
 .vertical-span-white {
   width: 0;
   height: 75px;
-  border: 2px solid #f2f2f2; }
+  border: 1.5px solid #f2f2f2; }
 
 .vertical-span-black {
   width: 0;
   height: 75px;
-  border: 2px solid #222222; }
+  border: 1.5px solid #222222; }
 
 .bottom-0 {
   bottom: 0; }
+  
   .top-0 {
     top: 0;
   }
@@ -552,7 +563,7 @@ html {
   .horizontal-span-white {
     width: 75px;
     height: 0;
-    border: 2px solid #f2f2f2; }
+    border: 1.5px solid #f2f2f2; }
   
 .top-0 {
   top: 0; }
@@ -563,7 +574,7 @@ html {
 .fs-vertical-span {
   width:0;
   height:100vh;
-  border:2px solid #f2f2f2;
+  border:1.5px solid #f2f2f2;
 }
 
 /*/////////////////////////////////////  /////////////////////////////////////
@@ -621,4 +632,12 @@ html {
   .flex-nowrap-mobile {
     flex-wrap: nowrap; } }
 
+    @media (max-width: 768px) {
+    }
+
+    @media (max-width: 980px) {
+    }
+
+    @media (max-width: 1200px) {
+    }
 /*# sourceMappingURL=style.css.map */

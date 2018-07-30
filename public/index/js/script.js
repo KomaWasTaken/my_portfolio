@@ -4,7 +4,6 @@ $(function() {
         var span = $("#span-projects"); 
         var projectsTop = projects.offset().top;  
         var projscroll = $(window).scrollTop();
-        console.log(scroll);
         if (projscroll >= projectsTop) {
             span.removeClass("absolute");
             span.addClass("fixed");

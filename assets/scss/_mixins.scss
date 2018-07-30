@@ -41,7 +41,7 @@
   font-size: $size; //backup en px
 }
 
-$total : 12;
+$total : 6;
 
 @function column-width($col){
   @return percentage($col/$total);

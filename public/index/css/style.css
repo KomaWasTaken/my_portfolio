@@ -53,82 +53,46 @@ table {
     font-size: $size; //backup en px
 } */
 .col-1 {
-  width: 8.33333%; }
-
-.col-2 {
   width: 16.66667%; }
 
-.col-3 {
-  width: 25%; }
-
-.col-4 {
+.col-2 {
   width: 33.33333%; }
 
-.col-5 {
-  width: 41.66667%; }
-
-.col-6 {
+.col-3 {
   width: 50%; }
 
-.col-7 {
-  width: 58.33333%; }
-
-.col-8 {
+.col-4 {
   width: 66.66667%; }
 
-.col-9 {
-  width: 75%; }
-
-.col-10 {
+.col-5 {
   width: 83.33333%; }
 
-.col-11 {
-  width: 91.66667%; }
-
-.col-12 {
+.col-6 {
   width: 100%; }
 
 .offset-1 {
-  margin-left: 8.33333%; }
-
-.offset-2 {
   margin-left: 16.66667%; }
 
-.offset-3 {
-  margin-left: 25%; }
-
-.offset-4 {
+.offset-2 {
   margin-left: 33.33333%; }
 
-.offset-5 {
-  margin-left: 41.66667%; }
-
-.offset-6 {
+.offset-3 {
   margin-left: 50%; }
 
-.offset-7 {
-  margin-left: 58.33333%; }
-
-.offset-8 {
+.offset-4 {
   margin-left: 66.66667%; }
 
-.offset-9 {
-  margin-left: 75%; }
-
-.offset-10 {
+.offset-5 {
   margin-left: 83.33333%; }
 
-.offset-11 {
-  margin-left: 91.66667%; }
-
-.offset-12 {
+.offset-6 {
   margin-left: 100%; }
 
 /*/////////////////////////////////////  /////////////////////////////////////
 /////////////////////////////////////  WIDTHS && HEIGHTS  /////////////////////////////////////
 /////////////////////////////////////  /////////////////////////////////////*/
 html {
-  size: 62.5%; }
+  font-size: 62.5%; }
 
 .w-100 {
   width: 100%; }
@@ -222,9 +186,9 @@ html {
 
 .h-100vh {
   height: 100vh; }
-  .h-95vh{
-    height:95vh;
-  }
+
+.h-95vh {
+  height: 95vh; }
 
 .h-75vh {
   height: 75vh; }
@@ -438,6 +402,30 @@ html {
 .bg-color-none {
   background-color: transparent; }
 
+.bg-about-1 {
+  background: url("../images/japan.jpg") center center no-repeat;
+  background-size: cover; }
+
+.bg-about-2 {
+  background: url("../images/astronomy.jpg") center center no-repeat;
+  background-size: cover; }
+
+.bg-about-3 {
+  background: url("../images/videogames.jpg") center center no-repeat;
+  background-size: cover; }
+
+.bg-about-4 {
+  background: url("../images/frontend.jpg") center center no-repeat;
+  background-size: cover; }
+
+.bg-about-5 {
+  background: url("../images/backend.jpg") center center no-repeat;
+  background-size: cover; }
+
+.bg-about-6 {
+  background: url("../images/design.jpg") center center no-repeat;
+  background-size: cover; }
+
 /*/////////////////////////////////////  /////////////////////////////////////
 /////////////////////////////////////  FONT STUFF  //////////////////////////
 /////////////////////////////////////  /////////////////////////////////////*/
@@ -501,31 +489,32 @@ html {
 .line-h-3-5rem {
   line-height: 3.5rem; }
 
-.disp_none {
+
+/*/////////////////////////////////////  /////////////////////////////////////
+/////////////////////////////////////  ANIMATION STUFF  ////////////////
+/////////////////////////////////////  /////////////////////////////////////*/
+@keyframes fadeIn {
+  from { opacity:0; }
+    to { opacity:1; }
+}
+
+.transition-1{
+  transition: all 0.5s ease;
+}
+
+.bg-about-1:hover, .bg-about-2:hover, .bg-about-3:hover, .bg-about-4:hover, .bg-about-5:hover, .bg-about-6:hover{
+  width:25%;
+}
+.bg-about-1:hover .d-none, .bg-about-2:hover .d-none, .bg-about-3:hover .d-none, .bg-about-4:hover .d-none, .bg-about-5:hover .d-none, .bg-about-6:hover .d-none{
+  display:block;
+  animation : fadeIn 0.5s;
+}
+
+
+.d-none {
   display: none; }
 
-.menu_cool {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end; }
 
-#navigation a:hover {
-  color: #c39e9a; }
-
-.z_3 {
-  z-index: 5; }
-
-.z_2 {
-  z-index: 4; }
-
-.z_1 {
-  z-index: 3; }
-
-.z_0 {
-  z-index: 2; }
 
 .fixed {
   position: fixed; }
@@ -536,14 +525,30 @@ html {
 /*/////////////////////////////////////  /////////////////////////////////////
 /////////////////////////////////////  CLASSES SPÉCIFIQUES  //////////////////////////
 /////////////////////////////////////  /////////////////////////////////////*/
-.vertical-span {
+.vertical-span-white {
   width: 0;
   height: 75px;
   border: 2px solid #f2f2f2; }
 
+.vertical-span-black {
+  width: 0;
+  height: 75px;
+  border: 2px solid #616161; }
+
 .bottom-0 {
   bottom: 0; }
 
+  .opacity-0 {
+    opacity:0; }
+
+.fs-vertical-span {
+  width:0;
+  height:100vh;
+  border:2px solid #f2f2f2;
+}
+.left-50{
+  left:50%;
+}
 /*/////////////////////////////////////  /////////////////////////////////////
 /////////////////////////////////////  MEDIA QUERIES  //////////////////////////
 /////////////////////////////////////  /////////////////////////////////////*/

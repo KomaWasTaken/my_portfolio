@@ -1,15 +1,19 @@
 $(function() {
-    var header = $(".navbar");
-    var links = $(".links");
-    $(window).scroll(function() {    
-        var scroll = $(window).scrollTop();
-        if (scroll >= 200) {
-            header.addClass("scrolled_nav");
-            links.addClass("scrolled_links")
-        } else {
-            header.removeClass("scrolled_nav");
-            links.removeClass("scrolled_links")
+    var projects = $("#projects");
+    $(window).on('scroll', (function() { 
+        var span = $("#span-projects"); 
+        var projectsTop = projects.offset().top;  
+        var projscroll = $(window).scrollTop();
+        console.log(scroll);
+        if (projscroll >= projectsTop) {
+            span.removeClass("absolute");
+            span.addClass("fixed");
+            span.addClass('top-0');
+        } else{
+            span.removeClass("fixed");
+            span.addClass("absolute");
+            span.removeClass('top-0');
         }
-    });
+    }));
   
 });

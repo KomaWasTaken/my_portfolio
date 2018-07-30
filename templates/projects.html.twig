@@ -1,11 +1,25 @@
-<section class="d-flex flex-direction-column">
-    <div class="absolute left-50">
+<section class="d-flex a-i-center j-c-around flex-wrap" id="projects">
+    <div class="d-flex flex-direction-column a-i-center a-s-start absolute" id="span-projects">
         <span class="vertical-span-black"></span>
-        <p class="fs-18">Projects</p>
+        <p class="fs-30 color-2 coolvetica">Projects</p>
     </div>
 {%   for project in projects   %}
-    <div class="h-100vh"></div>
-        {{   project.porTitle   }}
-        {{   project.porShortDesc   }}
+    <div class="h-100vh w-100 d-flex" style = "background: url('./index/images/{{ project.porImage }}') center center no-repeat; background-size:90%;" >
+        <div class="w-50 bg-color-2 h-100">
+            <h3 class="color-1 fs-30">
+                {{   project.porTitle   }}
+            </h3>
+            <p class="color-1 fs-20">
+                {{   project.porLongDesc   }}
+            </p>
+            <div class="w-20 d-flex j-c-between a-i-center">
+                <span class="horizontal-span-white"></span> 
+                <a href="{{  project.porLink  }}" class="color-1 text-decoration-none fs-18">
+                    voir plus
+                </a>  
+            </div>  
+        </div>
+        <div class="w-50"></div>
+    </div>
     {%   endfor   %}
 </section>

@@ -41,6 +41,11 @@ class Portfolio
      */
     private $por_main_techno;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $por_image;
+
     public function getId()
     {
         return $this->id;
@@ -102,6 +107,18 @@ class Portfolio
     public function setPorMainTechno(?string $por_main_techno): self
     {
         $this->por_main_techno = $por_main_techno;
+
+        return $this;
+    }
+
+    public function getPorImage(): ?string
+    {
+        return $this->por_image;
+    }
+
+    public function setPorImage(string $por_image): self
+    {
+        $this->por_image = $por_image;
 
         return $this;
     }

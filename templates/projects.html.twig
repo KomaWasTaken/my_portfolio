@@ -1,22 +1,23 @@
-<section class="d-flex a-i-center j-c-around flex-wrap" id="projects">
-    <div class="d-flex flex-direction-column a-i-center a-s-start absolute" id="span-projects">
+<span id="projects"></span>
+<section class="d-flex a-i-center j-c-around flex-wrap">
+    <div class="d-flex flex-direction-column a-i-center a-s-start absolute d-none-mobile z-index-3" id="span-projects">
         <span class="vertical-span-black"></span>
         <p class="fs-30 color-2 coolvetica">Projects</p>
     </div>
 {%   for project in projects   %}
-    <div class="h-100vh w-100 d-flex" style = "background: url('./index/images/{{ project.porImage }}') center center no-repeat; background-size:90%;" >
+    <div class="h-100vh w-100 d-flex bg-project no-bg-mobile" style = "background: url('./index/images/{{ project.porImage }}') center center no-repeat; background-size:90%;" >
     
-        <div class="w-50 bg-color-2 h-100 d-flex a-i-center j-c-center">
-            <div class="w-90 h-70 d-flex flex-direction-column j-c-between ">
+        <div class="w-50 bg-color-2 h-100 d-flex a-i-center j-c-center w-100-mobile">
+            <div class="w-90 h-70 d-flex flex-direction-column j-c-between w-100-mobile d-flex-mobile flex-direction-column-mobile a-i-center-mobile">
                 <h3 class="color-1 fs-55 coolvetica text-center">
                     {{   project.porTitle   }}
                 </h3>
-                <p class="color-1 fs-20 noto m-l-75 w-75">
+                <p class="color-1 fs-20 noto m-l-75 w-75 w-90-mobile">
                     {{   project.porLongDesc   }}
                 </p>
-                <div class="w-25 d-flex j-c-between a-i-center m-l-75">
+                <div class="w-25 d-flex j-c-between a-i-center m-l-75 w-50-mobile w-50-tablet">
                     <span class="horizontal-span-white"></span> 
-                    <a href="{{  project.porLink  }}" class="color-1 text-decoration-none fs-18 noto">
+                    <a href="{{  project.porLink  }}" class="color-1 text-decoration-none fs-18 noto transition-2">
                         voir plus
                     </a>  
                 </div>

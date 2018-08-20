@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+            <link rel="stylesheet" href="{{ asset('index/css/style.css') }}">
+        {% endblock %}
+    </head>
+    <body class="w-100">
+        <main class="w-100 d-flex flex-direction-column">
+            {% include 'header.html.twig' %}
+
+            {{ form_start(formProjet) }}
+                {{ form_row(formProjet.por_title, {'label': 'Nom du projet : '}) }}
+                {{ form_row(formProjet.por_short_desc, {'label': 'Description courte : '}) }}
+                {{ form_row(formProjet.por_long_desc, {'label': 'Description longue : '}) }}
+                {{ form_row(formProjet.por_link, {'label': 'URL : '}) }}
+                {{ form_row(formProjet.por_main_techno, {'label': 'Technologies principales : '}) }}
+                {{ form_row(formProjet.por_image, {'label': 'Ajout image : '}) }}              
+                
+        <input type="submit" value="Envoyer">
+    {{ form_end(formProjet) }}
+
+    <a href="/">Retour</a>
+        </main>
+
+
+        {% include 'footer.html.twig' %} 
+    </body>
+</html>
